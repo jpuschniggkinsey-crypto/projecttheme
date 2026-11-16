@@ -1,13 +1,58 @@
 /*
- * Constants
- *
- * Keep colors and reusable theme values here.
+ * Constants – Treasure Hunter design system
+ * All values come from Figma > Design System page.
  */
 :root {
-  --theme-color-primary: #20254A;
-  --theme-color-secondary: #68DC8A;
-  --theme-transition: all 0.3s ease-in-out;
+  /* ===== Brand colors ===== */
+  --theme-color-purple: #9B34FB;   /* big display titles only */
+  --theme-color-navy: #242A55;     /* page background */
+  --theme-color-navy-dark: #171B3B;/* footer background, text on green */
+  --theme-color-green: #68DC8A;    /* buttons, header */
+  --theme-color-blue: #0675F8;
+  --theme-color-gold: #E5B43C;     /* outlines, stars, table header */
+  --theme-color-coral: #EE827C;
+  --theme-color-teal: #3CCEAC;
 
-  --theme-font-body: "Inter", Arial, sans-serif;
+  /* ===== Neutrals ===== */
+  --theme-color-white: #FFFFFF;
+  --theme-color-gray: #626262;     /* muted text on cards */
+
+  /* ===== Roles (what each color is used for) ===== */
+  --theme-color-primary: var(--theme-color-navy);
+  --theme-color-secondary: var(--theme-color-green);
+  --theme-color-background: var(--theme-color-navy);
+  --theme-color-text: var(--theme-color-white);
+  --theme-color-card: var(--theme-color-white);
+  --theme-color-card-text: var(--theme-color-navy-dark);
+
+  /* ===== Fonts ===== */
   --theme-font-heading: "Heraldic-Shadows", Arial, sans-serif;
+  --theme-font-body: "Inter", Arial, sans-serif;
+
+  /* ===== Font sizes (Heraldic) ===== */
+  --theme-fs-display: 96px;  /* page title */
+  --theme-fs-hero: 48px;     /* hero button */
+  --theme-fs-nav: 24px;      /* logo + nav */
+
+  /* ===== Font sizes (Inter) ===== */
+  --theme-fs-body-m: 16px;   --theme-lh-body-m: 26px;   /* Body/M  regular */
+  --theme-fs-body-s: 14px;   --theme-lh-body-s: 22px;   /* Body/S  regular */
+  --theme-fs-label-m: 16px;  --theme-lh-label-m: 20px;  /* Label/M semi bold */
+  --theme-fs-label-s: 14px;  --theme-lh-label-s: 20px;  /* Label/S semi bold */
+
+  /* ===== Spacing ===== */
+  --theme-space-4: 4px;
+  --theme-space-8: 8px;
+  --theme-space-12: 12px;
+  --theme-space-16: 16px;
+  --theme-space-24: 24px;
+  --theme-space-32: 32px;
+  --theme-space-48: 48px;
+  --theme-space-64: 64px;
+  --theme-space-96: 96px;
+
+  /* ===== Other ===== */
+  --theme-radius: 8px;
+  --theme-radius-pill: 999px;
+  --theme-transition: all 0.3s ease-in-out;
 }
