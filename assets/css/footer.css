@@ -27,3 +27,60 @@ footer .footer-content {
 .footer-logo img {
   filter: brightness(0) invert(1);
 }
+
+/* ===== Footer – Treasure Hunter (from Figma) ===== */
+.site-footer {
+  background-color: var(--theme-color-navy-dark);
+  border-top: 4px solid var(--theme-color-gold);
+  color: var(--theme-color-white);
+  padding: var(--theme-space-48) var(--theme-space-64) var(--theme-space-32);
+}
+
+.site-footer .footer-top {
+  display: flex;
+  gap: var(--theme-space-64);
+  align-items: flex-start;
+  padding-bottom: var(--theme-space-32);
+  border-bottom: 1px solid var(--theme-color-gray);
+}
+
+.site-footer .footer-logo img,
+.site-footer .footer-logo svg {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.site-footer .footer-contact p {
+  margin: 0 0 var(--theme-space-12);
+  font-size: var(--theme-fs-body-m);
+}
+
+.site-footer .footer-contact__title {
+  font-weight: 600;
+}
+
+.site-footer a {
+  color: var(--theme-color-white);
+}
+
+.site-footer a:hover {
+  color: var(--theme-color-green);
+}
+
+.site-footer .footer-bottom p {
+  margin: var(--theme-space-32) 0 0;
+  font-size: var(--theme-fs-body-s);
+}
+
+/* Mobile: stack everything */
+@media (max-width: 767px) {
+  .site-footer {
+    padding: var(--theme-space-48) var(--theme-space-24) var(--theme-space-32);
+  }
+
+  .site-footer .footer-top {
+    flex-direction: column;
+    gap: var(--theme-space-32);
+  }
+}

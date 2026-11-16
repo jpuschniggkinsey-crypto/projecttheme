@@ -37,3 +37,63 @@ header {
     width: min(100%, 283px);
   }
 }
+
+/* ===== Header – Treasure Hunter (from Figma) ===== */
+.site-header {
+  background-color: var(--theme-color-green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 0 var(--theme-space-24);
+}
+
+/* Logo */
+.site-header .site-branding img,
+.site-header .site-branding svg {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Menu links */
+.site-header .main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--theme-space-48);
+}
+
+.site-header .main-menu a {
+  font-family: var(--theme-font-heading);
+  font-size: var(--theme-fs-nav);
+  color: var(--theme-color-navy-dark);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: var(--theme-transition);
+}
+
+/* Active page + hover = underline */
+.site-header .main-menu .current-menu-item > a,
+.site-header .main-menu a:hover {
+  border-bottom-color: var(--theme-color-navy-dark);
+}
+
+/* Mobile menu icon (☰) color */
+.site-header .menu-toggle {
+  background: none;
+  border: none;
+  color: var(--theme-color-navy-dark);
+}
+
+.site-header .menu-toggle-icon span {
+  background-color: var(--theme-color-navy-dark);
+}
+
+/* Desktop: links next to each other */
+@media (min-width: 768px) {
+  .site-header .main-menu {
+    display: flex;
+  }
+}

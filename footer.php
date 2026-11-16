@@ -3,18 +3,23 @@
 
   <footer id="colophon" class="site-footer">
     <div class="footer-content container-lg">
-      <div class="footer-logo">
-        <?php
-        $logo_path = get_template_directory() . '/assets/images/logo.svg';
-        if ( file_exists( $logo_path ) ) :
-          ?>
-          <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.svg' ); ?>" alt="<?php esc_attr_e( 'Logo', 'textdomaintomodify' ); ?>">
-        <?php endif; ?>
+
+      <div class="footer-top">
+        <div class="footer-logo">
+          <?php get_template_part( 'template-parts/components/logo' ); ?>
+        </div>
+
+        <div class="footer-contact">
+          <p class="footer-contact__title">Contact</p>
+          <p><a href="mailto:TreasureHunter@gmail.com">TreasureHunter@gmail.com</a></p>
+          <p>Graz, Austria</p>
+        </div>
       </div>
-      <?php wp_nav_menu( array( 'theme_location' => 'menu-footer', 'menu_id' => 'menu-footer' ) ); ?>
-      <div class="footer-text">
-        <p> &copy; Tanja Kobler</p>
+
+      <div class="footer-bottom">
+        <p>&copy; <?php echo date( 'Y' ); ?> Treasure Hunter. All rights reserved. Made in Graz, Austria.</p>
       </div>
+
     </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
