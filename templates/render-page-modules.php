@@ -77,6 +77,13 @@ while (have_rows('page_modules')) : the_row();
 
     case 'google_map':
       get_template_part('template-parts/flex/layout', 'google-map'); break;
+
+    // Treasure Hunter – eigene Komponenten
+    case 'hunt_cards':
+      get_template_part('template-parts/flex/layout', 'hunt-cards'); break;
+
+    case 'hunt_table':
+      get_template_part('template-parts/flex/layout', 'hunt-table'); break;
   }
 
   if (function_exists('section_close')) {

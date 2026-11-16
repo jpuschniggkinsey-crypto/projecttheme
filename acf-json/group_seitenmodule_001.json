@@ -3600,6 +3600,686 @@
                     "acfe_flexible_settings": false,
                     "acfe_flexible_settings_size": "medium",
                     "acfe_flexible_modal_edit_size": false
+                },
+                "layout_hunt_cards": {
+                    "key": "layout_hunt_cards",
+                    "name": "hunt_cards",
+                    "label": "Hunt Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_huntcards_headline",
+                            "label": "Überschrift",
+                            "name": "headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_huntcards_items",
+                            "label": "Hunts",
+                            "name": "hunts",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "button_label": "Hunt hinzufügen",
+                            "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_huntcard_image",
+                                    "label": "Bild",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "parent_repeater": "field_huntcards_items"
+                                },
+                                {
+                                    "key": "field_huntcard_title",
+                                    "label": "Hunt Titel",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_huntcards_items"
+                                },
+                                {
+                                    "key": "field_huntcard_author",
+                                    "label": "Autor",
+                                    "name": "author",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_huntcards_items"
+                                },
+                                {
+                                    "key": "field_huntcard_plays",
+                                    "label": "Anzahl Plays",
+                                    "name": "plays",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 0,
+                                    "min": 0,
+                                    "max": "",
+                                    "step": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_huntcards_items"
+                                },
+                                {
+                                    "key": "field_huntcard_rating",
+                                    "label": "Rating (0–5)",
+                                    "name": "rating",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 5,
+                                    "min": 0,
+                                    "max": 5,
+                                    "step": 0.5,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_huntcards_items"
+                                },
+                                {
+                                    "key": "field_huntcard_link",
+                                    "label": "Link (Play this hunt)",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_huntcards_items"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_huntcards_columns",
+                            "label": "Spalten",
+                            "name": "columns",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "2": "2",
+                                "3": "3",
+                                "4": "4"
+                            },
+                            "default_value": 3,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_huntcards_container",
+                            "label": "container",
+                            "name": "container",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "container": "container-small",
+                                "container-lg": "container-lg",
+                                "container-fluid": "container-fluid"
+                            },
+                            "default_value": "container-lg",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_custom": 0,
+                            "placeholder": "",
+                            "search_placeholder": "",
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_huntcards_background",
+                            "label": "background",
+                            "name": "background",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "none",
+                                "light": "light",
+                                "dark": "dark"
+                            },
+                            "default_value": "none",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_huntcards_show_on",
+                            "label": "Sichtbarkeit (Breakpoint)",
+                            "name": "show-on",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Überall": "everywhere",
+                                "Nur Mobil": "only-mobile",
+                                "Nur Desktop": "only-desktop"
+                            },
+                            "default_value": "Überall",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_huntcards_id_anchor",
+                            "label": "ID/Anchor",
+                            "name": "id-anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_huntcards_padding_y",
+                            "label": "Abstand Unten",
+                            "name": "padding_y",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "0": "kein Abstand",
+                                "py-2": "kleiner Abstand",
+                                "py-5": "normaler Abstand",
+                                "py-10": "großer Abstand"
+                            },
+                            "default_value": "py-5",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Treasure Hunter"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false
+                },
+                "layout_hunt_table": {
+                    "key": "layout_hunt_table",
+                    "name": "hunt_table",
+                    "label": "Hunt Table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_hunttable_headline",
+                            "label": "Überschrift",
+                            "name": "headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_hunttable_rows",
+                            "label": "Zeilen",
+                            "name": "rows",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "button_label": "Zeile hinzufügen",
+                            "collapsed": "",
+                            "acfe_repeater_stylised_button": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_hunttable_title",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_hunttable_rows"
+                                },
+                                {
+                                    "key": "field_hunttable_author",
+                                    "label": "Autor",
+                                    "name": "author",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_hunttable_rows"
+                                },
+                                {
+                                    "key": "field_hunttable_plays",
+                                    "label": "Play count",
+                                    "name": "plays",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 0,
+                                    "min": 0,
+                                    "max": "",
+                                    "step": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_hunttable_rows"
+                                },
+                                {
+                                    "key": "field_hunttable_rating",
+                                    "label": "Rating (0–5)",
+                                    "name": "rating",
+                                    "aria-label": "",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 5,
+                                    "min": 0,
+                                    "max": 5,
+                                    "step": 0.5,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_hunttable_rows"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_hunttable_container",
+                            "label": "container",
+                            "name": "container",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "container": "container-small",
+                                "container-lg": "container-lg",
+                                "container-fluid": "container-fluid"
+                            },
+                            "default_value": "container-lg",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_custom": 0,
+                            "placeholder": "",
+                            "search_placeholder": "",
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_hunttable_background",
+                            "label": "background",
+                            "name": "background",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "none": "none",
+                                "light": "light",
+                                "dark": "dark"
+                            },
+                            "default_value": "none",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_hunttable_show_on",
+                            "label": "Sichtbarkeit (Breakpoint)",
+                            "name": "show-on",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Überall": "everywhere",
+                                "Nur Mobil": "only-mobile",
+                                "Nur Desktop": "only-desktop"
+                            },
+                            "default_value": "Überall",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        },
+                        {
+                            "key": "field_hunttable_id_anchor",
+                            "label": "ID/Anchor",
+                            "name": "id-anchor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_hunttable_padding_y",
+                            "label": "Abstand Unten",
+                            "name": "padding_y",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "0": "kein Abstand",
+                                "py-2": "kleiner Abstand",
+                                "py-5": "normaler Abstand",
+                                "py-10": "großer Abstand"
+                            },
+                            "default_value": "py-5",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "allow_custom": 0,
+                            "search_placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_category": [
+                        "Treasure Hunter"
+                    ],
+                    "acfe_flexible_render_template": false,
+                    "acfe_flexible_render_style": false,
+                    "acfe_flexible_render_script": false,
+                    "acfe_flexible_thumbnail": false,
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_modal_edit_size": false
                 }
             },
             "min": "",
@@ -3639,5 +4319,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1759588616
+    "modified": 1794833655
 }

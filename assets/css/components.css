@@ -39,3 +39,127 @@
 .projecttheme-image-slider .carousel-item img {
   object-fit: cover;
 }
+
+/*** Stars (shared by Hunt Cards + Hunt Table) ***/
+
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: var(--theme-color-gray);
+}
+
+.stars::before {
+  content: "★★★★★";
+}
+
+.stars__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--theme-color-gold);
+}
+
+.stars__fill::before {
+  content: "★★★★★";
+}
+
+
+/*** Hunt Cards ***/
+
+.hunt-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--theme-color-card);
+  color: var(--theme-color-card-text);
+  border-radius: var(--theme-radius);
+  overflow: hidden;
+  padding: var(--theme-space-12);
+}
+
+.hunt-card__image {
+  aspect-ratio: 16 / 10;
+  background: #EEEEEE;
+  border-radius: calc(var(--theme-radius) / 2);
+  overflow: hidden;
+}
+
+.hunt-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hunt-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--theme-space-4);
+  padding-top: var(--theme-space-16);
+}
+
+.hunt-card__title {
+  font-family: var(--theme-font-body);
+  font-size: var(--theme-fs-label-m);
+  line-height: var(--theme-lh-label-m);
+  font-weight: 600;
+  color: var(--theme-color-card-text);
+  margin: 0;
+}
+
+.hunt-card__meta {
+  font-size: var(--theme-fs-body-s);
+  color: var(--theme-color-gray);
+  margin: 0;
+}
+
+.hunt-card__btn {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.hunt-card .stars {
+  margin-bottom: var(--theme-space-16);
+}
+
+
+/*** Hunt Table ***/
+
+.hunt-table__wrapper {
+  overflow-x: auto;
+}
+
+.hunt-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--theme-color-navy-dark);
+  text-align: center;
+}
+
+.hunt-table th {
+  background: var(--theme-color-gold);
+  font-family: var(--theme-font-heading);
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: var(--theme-space-12) var(--theme-space-16);
+}
+
+.hunt-table td {
+  background: var(--theme-color-green);
+  font-size: var(--theme-fs-body-s);
+  padding: var(--theme-space-8) var(--theme-space-16);
+}
+
+.hunt-table th,
+.hunt-table td {
+  border: 1px solid var(--theme-color-navy-dark);
+}
+
+.hunt-table .stars {
+  color: rgba(23, 27, 59, 0.3);
+}
